@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f7fb;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f5f7fb;
+}
+
+.dashboard-container > h1,
+.dashboard-container > p,
+.dashboard-container > section {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard-container > h1 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.dashboard-container > p {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #e2e8f0;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+section[aria-label="Overview metrics"] > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+section[aria-label="Overview metrics"] > div > div {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+section[aria-label="Overview metrics"] h3 {
+  margin-bottom: 8px;
+}
+
+section[aria-label="Service summary"] > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+section[aria-label="Service summary"] > div > div {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+section[aria-label="Share referral"] > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+section[aria-label="Share referral"] input {
+  flex-grow: 1;
+  height: 38px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 10px;
+}
+
+section[aria-label="Share referral"] button {
+  height: 38px;
+  border: none;
+  background-color: #6366f1;
+  color: white;
+  border-radius: 6px;
+  padding: 0 18px;
+  cursor: pointer;
+}
+
+input[type='search'] {
+  height: 38px;
+  width: 250px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 10px;
+  margin-right: 20px;
+}
+
+select {
+  height: 38px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 10px;
+  margin-left: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  text-align: left;
+  padding: 14px;
+  background-color: #f8fafc;
+}
+
+td {
+  padding: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+footer {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 40px;
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer nav {
+  display: flex;
+  gap: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #64748b;
+}
+
+footer p {
+  margin: 0;
+}

@@ -1,0 +1,33 @@
+.notfoundcontainer {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfoundcard {
+    text-align: center;
+}
+
+.notfoundheading {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.notfoundtext {
+    font-size: 16px;
+    color: #475569;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.backlink {
+    text-decoration: none;
+    color: #6366f1;
+    font-size: 14px;
+    font-weight: 600;
+}
+

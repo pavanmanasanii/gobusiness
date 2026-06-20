@@ -1,0 +1,69 @@
+.maincontainer{
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logincontainer{
+    background-color: #ffffff;
+    width: 420px;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.loginform{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+}
+
+.tagline{
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.signin {
+  height: 42px;
+  border: none;
+  border-radius: 4px;
+  background-color: #6366f1;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.inputcontainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.inputcontainer label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #334155;
+}
+
+.inputcontainer input {
+  height: 40px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 0 12px;
+  outline: none;
+}
+
+.errormessage{
+    color: red;
+    font-family: "Roboto";
+}
