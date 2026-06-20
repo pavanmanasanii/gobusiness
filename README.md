@@ -1,16 +1,165 @@
-# React + Vite
+# Go Business Referral Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based referral management dashboard that allows users to sign in, view referral statistics, manage referrals, search and sort referral data, and view detailed referral information.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Authentication
 
-## React Compiler
+* User login using email and password
+* JWT token stored in cookies
+* Protected routes using authentication checks
+* Logout functionality
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Dashboard
 
-## Expanding the ESLint configuration
+* Overview metrics section
+* Service summary section
+* Referral sharing section
+* Referral table with:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  * Search
+  * Sort by date
+  * Client-side pagination
+* Responsive layout
+
+### Referral Details
+
+* View detailed information for a referral
+* Displays:
+
+  * Referral ID
+  * Name
+  * Service Name
+  * Date
+  * Profit
+* Navigation back to dashboard
+
+### Error Handling
+
+* Loading states
+* API failure states
+* Custom 404 page
+* Automatic redirect to `/not-found` for invalid routes
+
+## Technologies Used
+
+* React
+* React Router DOM v6
+* JavaScript (ES6+)
+* CSS3
+* js-cookie
+
+## Project Structure
+
+```text
+src
+├── components
+│   ├── Dashboard
+│   ├── Header
+│   ├── Login
+│   ├── NotFound
+│   ├── ProtectedRoute
+│   └── ReferralDetails
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project:
+
+```bash
+cd project-name
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Authentication Flow
+
+1. User submits login credentials.
+2. JWT token is received from the login API.
+3. Token is stored in cookies using:
+
+```javascript
+Cookies.set('jwt_token', token)
+```
+
+4. Protected routes verify the token before rendering pages.
+5. Unauthorized users are redirected to `/login`.
+
+## API Endpoints
+
+### Login
+
+```http
+POST /api/auth/signin
+```
+
+### Dashboard Data
+
+```http
+GET /api/referrals
+```
+
+### Search Referrals
+
+```http
+GET /api/referrals?search=<query>
+```
+
+### Sort Referrals
+
+```http
+GET /api/referrals?sort=asc
+GET /api/referrals?sort=desc
+```
+
+### Referral Details
+
+```http
+GET /api/referrals?id=<referralId>
+```
+
+## Pagination
+
+* Client-side pagination
+* 10 records per page
+* Previous and Next navigation
+* Dynamic page numbers
+
+## Search
+
+* Search by referral name or service name
+* API request triggered when Enter key is pressed
+
+## Routing
+
+| Route         | Description      |
+| ------------- | ---------------- |
+| /login        | Login page       |
+| /             | Dashboard        |
+| /referral/:id | Referral details |
+| /not-found    | Not Found page   |
+
+## Author
+
+Pavan Manasani
